@@ -13,6 +13,7 @@ use function function_exists;
 use function is_string;
 use function json_decode;
 use function json_last_error;
+use function json_validate;
 
 use const JSON_ERROR_NONE;
 
@@ -25,7 +26,7 @@ use const JSON_ERROR_NONE;
 final class Json extends AbstractRule
 {
     /**
-     * {@inheritDoc}
+     * @deprecated Calling `validate()` directly from rules is deprecated. Please use {@see \Respect\Validation\Validator::isValid()} instead.
      */
     public function validate($input): bool
     {

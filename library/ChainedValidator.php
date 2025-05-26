@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace Respect\Validation;
 
 use finfo;
-use Respect\Validation\Rules\Key;
 
 interface ChainedValidator extends Validatable
 {
@@ -45,8 +44,6 @@ interface ChainedValidator extends Validatable
      * @param mixed $maximum
      */
     public function between($minimum, $maximum): ChainedValidator;
-
-    public function bic(string $countryCode): ChainedValidator;
 
     public function boolType(): ChainedValidator;
 
@@ -201,7 +198,7 @@ interface ChainedValidator extends Validatable
         bool $mandatory = true
     ): ChainedValidator;
 
-    public function keySet(Key ...$rule): ChainedValidator;
+    public function keySet(Validatable ...$rule): ChainedValidator;
 
     public function keyValue(string $comparedKey, string $ruleName, string $baseKey): ChainedValidator;
 
@@ -294,6 +291,8 @@ interface ChainedValidator extends Validatable
 
     public function polishIdCard(): ChainedValidator;
 
+    public function portugueseNif(): ChainedValidator;
+
     public function positive(): ChainedValidator;
 
     public function postalCode(string $countryCode): ChainedValidator;
@@ -301,6 +300,8 @@ interface ChainedValidator extends Validatable
     public function primeNumber(): ChainedValidator;
 
     public function printable(string ...$additionalChars): ChainedValidator;
+
+    public function publicDomainSuffix(): ChainedValidator;
 
     public function punct(string ...$additionalChars): ChainedValidator;
 

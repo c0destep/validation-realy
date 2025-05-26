@@ -7,8 +7,8 @@ Validates subdivision country codes according to [ISO 3166-2][].
 The `$countryCode` must be a country in [ISO 3166-1 alpha-2][] format.
 
 ```php
-v::subdivisionCode('BR')->validate('SP'); // true
-v::subdivisionCode('US')->validate('CA'); // true
+v::subdivisionCode('BR')->isValid('SP'); // true
+v::subdivisionCode('US')->isValid('CA'); // true
 ```
 
 This rules uses data from [iso-codes][].
@@ -33,6 +33,7 @@ See also:
 - [Nip](Nip.md)
 - [Pesel](Pesel.md)
 - [PolishIdCard](PolishIdCard.md)
+- [PublicDomainSuffix](PublicDomainSuffix.md)
 - [Tld](Tld.md)
 
 [iso-codes]: https://salsa.debian.org/iso-codes-team/iso-codes

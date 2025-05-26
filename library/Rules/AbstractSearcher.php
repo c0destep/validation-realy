@@ -13,7 +13,6 @@ use Respect\Validation\Helpers\CanValidateUndefined;
 
 use function in_array;
 use function is_scalar;
-use function mb_strtoupper;
 
 /**
  * Abstract class for searches into arrays.
@@ -31,7 +30,7 @@ abstract class AbstractSearcher extends AbstractRule
     abstract protected function getDataSource($input = null): array;
 
     /**
-     * {@inheritDoc}
+     * @deprecated Calling `validate()` directly from rules is deprecated. Please use {@see \Respect\Validation\Validator::isValid()} instead.
      */
     public function validate($input): bool
     {
@@ -45,6 +44,6 @@ abstract class AbstractSearcher extends AbstractRule
             return false;
         }
 
-        return in_array(mb_strtoupper((string) $input), $dataSource, true);
+        return in_array((string) $input, $dataSource, true);
     }
 }

@@ -12,6 +12,7 @@ namespace Respect\Validation\Exceptions;
 /**
  * @author Cameron Hall <me@chall.id.au>
  * @author Henrique Moody <henriquemoody@gmail.com>
+ * @deprecated Using rule exceptions directly is deprecated, and will be removed in the next major version. Please use {@see ValidationException} instead.
  */
 final class YesException extends ValidationException
 {
@@ -20,10 +21,10 @@ final class YesException extends ValidationException
      */
     protected $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} is not considered as "Yes"',
+            self::STANDARD => '{{name}} must be similar to "Yes"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} is considered as "Yes"',
+            self::STANDARD => '{{name}} must not be similar to "Yes"',
         ],
     ];
 }

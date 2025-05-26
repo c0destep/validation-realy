@@ -23,6 +23,8 @@ final class CurrencyCode extends AbstractSearcher
      * @see http://www.currency-iso.org/en/home/tables/table-a1.html
      *
      * {@inheritDoc}
+     *
+     * @return string[]
      */
     protected function getDataSource($input = null): array
     {
@@ -31,7 +33,6 @@ final class CurrencyCode extends AbstractSearcher
             'AFN', // Afghani
             'ALL', // Lek
             'AMD', // Armenian Dram
-            'ANG', // Netherlands Antillean Guilder
             'AOA', // Kwanza
             'ARS', // Argentine Peso
             'AUD', // Australian Dollar
@@ -64,7 +65,6 @@ final class CurrencyCode extends AbstractSearcher
             'COP', // Colombian Peso
             'COU', // Unidad de Valor Real
             'CRC', // Costa Rican Colon
-            'CUC', // Peso Convertible
             'CUP', // Cuban Peso
             'CVE', // Cabo Verde Escudo
             'CZK', // Czech Koruna
@@ -156,7 +156,6 @@ final class CurrencyCode extends AbstractSearcher
             'SGD', // Singapore Dollar
             'SHP', // Saint Helena Pound
             'SLE', // Leone
-            'SLL', // Leone
             'SOS', // Somali Shilling
             'SRD', // Surinam Dollar
             'SSP', // South Sudanese Pound
@@ -186,6 +185,7 @@ final class CurrencyCode extends AbstractSearcher
             'VND', // Dong
             'VUV', // Vatu
             'WST', // Tala
+            'XAD', // Arab Accounting Dinar
             'XAF', // CFA Franc BEAC
             'XAG', // Silver
             'XAU', // Gold
@@ -194,6 +194,7 @@ final class CurrencyCode extends AbstractSearcher
             'XBC', // Bond Markets Unit European Unit of Account 9 (E.U.A.-9)
             'XBD', // Bond Markets Unit European Unit of Account 17 (E.U.A.-17)
             'XCD', // East Caribbean Dollar
+            'XCG', // Caribbean Guilder
             'XDR', // SDR (Special Drawing Right)
             'XOF', // CFA Franc BCEAO
             'XPD', // Palladium
@@ -206,7 +207,7 @@ final class CurrencyCode extends AbstractSearcher
             'YER', // Yemeni Rial
             'ZAR', // Rand
             'ZMW', // Zambian Kwacha
-            'ZWL', // Zimbabwe Dollar
+            'ZWG', // Zimbabwe Gold
         ];
     }
 }

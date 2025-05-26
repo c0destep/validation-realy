@@ -2,13 +2,13 @@
 
 - `HexRgbColor()`
 
-Validates weather the input is a hex RGB color or not.
+Validates whether the input is a hex RGB color or not.
 
 ```php
-v::hexRgbColor()->validate('#FFFAAA'); // true
-v::hexRgbColor()->validate('#ff6600'); // true
-v::hexRgbColor()->validate('123123'); // true
-v::hexRgbColor()->validate('FCD'); // true
+v::hexRgbColor()->isValid('#FFFAAA'); // true
+v::hexRgbColor()->isValid('#ff6600'); // true
+v::hexRgbColor()->isValid('123123'); // true
+v::hexRgbColor()->isValid('FCD'); // true
 ```
 
 ## Categorization

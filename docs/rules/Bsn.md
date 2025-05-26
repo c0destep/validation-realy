@@ -5,7 +5,7 @@
 Validates a Dutch citizen service number ([BSN](https://nl.wikipedia.org/wiki/Burgerservicenummer)).
 
 ```php
-v::bsn()->validate('612890053'); // true
+v::bsn()->isValid('612890053'); // true
 ```
 
 ## Categorization
@@ -26,3 +26,4 @@ See also:
 - [Cpf](Cpf.md)
 - [Imei](Imei.md)
 - [Nif](Nif.md)
+- [PortugueseNif](PortugueseNif.md)

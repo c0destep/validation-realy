@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Respect\Validation\Rules;
 
 use Respect\Validation\Test\RuleTestCase;
+use stdClass;
 
 /**
  * @covers \Respect\Validation\Exceptions\PublicDomainSuffixException
@@ -22,7 +23,7 @@ final class PublicDomainSuffixTest extends RuleTestCase
     /**
      * {@inheritDoc}
      */
-    public function providerForValidInput(): array
+    public static function providerForValidInput(): array
     {
         $rule = new PublicDomainSuffix();
 
@@ -36,11 +37,14 @@ final class PublicDomainSuffixTest extends RuleTestCase
     /**
      * {@inheritDoc}
      */
-    public function providerForInvalidInput(): array
+    public static function providerForInvalidInput(): array
     {
         $rule = new PublicDomainSuffix();
 
         return [
+            [$rule, []],
+            [$rule, null],
+            [$rule, new stdClass()],
             [$rule, 'NONONONONONONONONON'],
             [$rule, 'NONONONONONONONONON.uk'],
             [$rule, 'invalid.com'],

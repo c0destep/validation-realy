@@ -5,7 +5,7 @@
 Validates a Brazilian driver's license.
 
 ```php
-v::cnh()->validate('02650306461'); // true
+v::cnh()->isValid('02650306461'); // true
 ```
 
 ## Categorization
@@ -28,3 +28,4 @@ See also:
 - [NfeAccessKey](NfeAccessKey.md)
 - [Nif](Nif.md)
 - [Pis](Pis.md)
+- [PortugueseNif](PortugueseNif.md)

@@ -40,7 +40,7 @@ final class CountryCodeTest extends RuleTestCase
     /**
      * {@inheritDoc}
      */
-    public function providerForValidInput(): array
+    public static function providerForValidInput(): array
     {
         return [
             [new CountryCode(CountryCode::ALPHA2),  'BR'],
@@ -58,9 +58,10 @@ final class CountryCodeTest extends RuleTestCase
     /**
      * {@inheritDoc}
      */
-    public function providerForInvalidInput(): array
+    public static function providerForInvalidInput(): array
     {
         return [
+            [new CountryCode(),  'ca'],
             [new CountryCode(CountryCode::ALPHA2),  'USA'],
             [new CountryCode(CountryCode::ALPHA3),  'US'],
             [new CountryCode(CountryCode::NUMERIC), '000'],

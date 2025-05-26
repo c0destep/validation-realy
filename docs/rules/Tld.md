@@ -5,10 +5,10 @@
 Validates whether the input is a top-level domain.
 
 ```php
-v::tld()->validate('com'); // true
-v::tld()->validate('ly'); // true
-v::tld()->validate('org'); // true
-v::tld()->validate('COM'); // true
+v::tld()->isValid('com'); // true
+v::tld()->isValid('ly'); // true
+v::tld()->isValid('org'); // true
+v::tld()->isValid('COM'); // true
 ```
 
 ## Categorization
@@ -28,5 +28,5 @@ See also:
 - [Domain](Domain.md)
 - [Ip](Ip.md)
 - [MacAddress](MacAddress.md)
-- [SubdivisionCode](SubdivisionCode.md)
 - [PublicDomainSuffix](PublicDomainSuffix.md)
+- [SubdivisionCode](SubdivisionCode.md)
